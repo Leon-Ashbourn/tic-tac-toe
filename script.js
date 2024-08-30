@@ -72,9 +72,7 @@ const gameControl = (function(){
             if(i===arrayLength-1 && gameStatus === false) gameStatus = "Draw";
             startButtonStat = false; 
         }
-        if(gameStatus || gameStatus === 'Draw'){
-            screenController.display();
-            
+        if(gameStatus || gameStatus === 'Draw'){            
             startButtonStat = false;
             reset();
         }
@@ -84,7 +82,6 @@ const gameControl = (function(){
     const switchPlayerManually = () => {
         checkWinner();
         switchPlayer();
-        screenController.display();
         if(gameStatus) gameStatus = false;
     } 
     const getBoard = (input) => Boolean(board.board[input]); 
@@ -96,7 +93,6 @@ const gameControl = (function(){
         for(let i =0; i< 9; i++){
             board.board[i] = '';
         }
-        activePlayer = players[1];
         startButtonStat = false;
     }
 
@@ -124,6 +120,7 @@ const screenController = (function(){
 
         gameControl.updateBoard(inputVal);
         gameControl.switchPlayerManually();
+        display();
     })
     const display = ()=>{
         gameBoard.textContent = '';
