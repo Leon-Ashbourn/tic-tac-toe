@@ -82,7 +82,6 @@ const gameControl = (function(){
     const switchPlayerManually = () => {
         checkWinner();
         switchPlayer();
-        if(gameStatus) gameStatus = false;
     } 
     const getBoard = (input) => Boolean(board.board[input]); 
     const updateBoard = (input) => board.board[input] = activePlayer.marker; 
