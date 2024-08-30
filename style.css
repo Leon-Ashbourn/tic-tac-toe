@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p,h1, h2, h3, h4, h5, h6, input {
+    padding: 0;
+    margin: 0;
+}
+.container> div {
+    margin-bottom: 20px;
+}
+.container> div:first-child {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 900;
+}
+.container > .button {
+    width: 100%;
+    text-align: center;
+}
+.container > div> button{
+    padding: 8px 24px;
+    font-size: 1.3rem;
+    background-color: #64748b;
+    border: 2px solid black;
+    border-radius: 24px;
+}
+.board-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.game-board {
+    width: 304px;
+    height: 304px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+.game-board > div {
+    border: 2px solid black;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 650;
+    padding-top: 25px;
+}
+.player-container>form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.player-container > form > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+form > div {
+    margin-bottom: 25px;
+}
+label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+input {
+    outline: none; 
+    height: 24px;
+    width: 200px;
+}
+input:focus {
+    border: 1px solid #374151;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px;
+}
+.game-status {
+    font-size: 1.6rem;
+    font-weight: 650;
+    width: 100%;
+    text-align: center;
+}
+label, input {
+    display: block;
+}
+input[type='submit'] {
+    background: #d4d4d4;
+    border: 2px solid black;
+    padding: 8px 24px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    box-shadow: 0px 0px 20px ;
+    height: initial;
+    width: initial;
+}

@@ -9,14 +9,30 @@
 <body>
 
     <div class="container">
+        <div>TIC-TAC-TOE</div>
         <div class="button">
-            <button>Start Game</button>
+            <button id="start-btn">Start Game</button>
         </div>
-        <div class="game-board"></div>
         <div class="player-container">
-            <div class="player-one"></div>
-            <div class="player-two"></div>
+            <form action="#" onsubmit='preventDefault'>
+                <div>
+                    <div class="player-one">
+                        <label for="player-name1">Enter player-1 name: </label>
+                        <input type="text" id="player-name1">
+                    </div>
+                    <div class="player-two">
+                        <label for="player-name2">Enter player-2 name:</label>
+                        <input type="text" id="player-name2">
+                    </div>
+                </div>
+                <div><input type="submit" value="Create Players"></div>
+            </form>
         </div>
+        <div class="game-status">Ongoing...</div>
+        <div class="board-container">
+            <div class="game-board"></div>
+        </div>
+        
     </div>
     
     <script src="script.js"></script>
