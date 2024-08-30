@@ -81,7 +81,9 @@ const gameControl = (function(){
     const getActivePlayer = () =>activePlayer;
     const switchPlayerManually = () => {
         checkWinner();
-        switchPlayer();
+        if(!gameStatus) switchPlayer();
+        screenController.display();
+        if(gameStatus) gameStatus = false;
     } 
     const getBoard = (input) => Boolean(board.board[input]); 
     const updateBoard = (input) => board.board[input] = activePlayer.marker; 
@@ -119,7 +121,6 @@ const screenController = (function(){
 
         gameControl.updateBoard(inputVal);
         gameControl.switchPlayerManually();
-        display();
     })
     const display = ()=>{
         gameBoard.textContent = '';
